@@ -38,7 +38,7 @@ $(function(){
   });
 
   //プラスボタン
-  $('.text-hide > .text').after('<div class="plus"><a href="#plus">＋</a></div>');
+  $('.text-hide > .text').after('<div class="plus"><a href="#">＋</a></div>');
 
   plusBtn();
 
@@ -48,24 +48,31 @@ $(function(){
 
   });
 
-  $('#plus').click(function(){
+  var bool = true;
 
-    var boolean = true;
+  $('.plus').click(function(){
 
-    if(boolean == true;){
+    $(this).prev().slideToggle();
 
-      $(this).addClass('turn');
+    if(bool == true){
+
+      bool = false;
+
+      $(this).css({
+        'transform':'rotate(45deg)'
+      });
 
     } else{
 
-      $(this).removeClass('turn');
+      bool = true;
+
+      $(this).css({
+        'transform':'rotate(90deg)'
+      });
 
     }
 
-    $(this).parent().prev().slideToggle();
-
     return false;
-
 
   });
 
@@ -73,13 +80,13 @@ $(function(){
 
     if(window.matchMedia('(max-width: 767px)').matches){
 
-        $('#plus').show();
+        $('.plus').show();
 
         $('.text').hide();
 
     } else{
 
-        $('#plus').hide();
+        $('.plus').hide();
 
         $('.text').show();
 
