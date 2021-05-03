@@ -129,6 +129,12 @@ a {display: block;
                     text-align: center;
                     padding: 20px 0}
 
+@media(max-width: 599px){
+
+ p {font-size: 13px;}
+      
+}
+
 @media(max-width: 767px){
 
   .mainbody  {padding-right: 10%;
