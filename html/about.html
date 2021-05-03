@@ -13,7 +13,7 @@
 <body>
   <header class="header">
     <div class="header-inner">
-     <h1><a href="index.html">AYAKA YASUNO</a></h1>
+     <h1><a href="https://flowertampopo.github.io/github-portfile/index.html">AYAKA YASUNO</a></h1>
     </div>
   </header>
 
@@ -66,7 +66,7 @@
           <a href="#" id="close">×</a>
         </div>
         <ul id="modalMenu">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="https://flowertampopo.github.io/github-portfile/html/index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="skill.html">Skill</a></li>
         </ul>
@@ -80,135 +80,6 @@
       <p>Copyright &copy; KUMA. All Rights Reserved.</p>
     </div>
   </footer>
-
-<script>
-$(function(){
-  //トップボタン
-  var topBtn = $('#pageTop');
-
-  topBtn.click(function(){
-
-    $('body, html').animate({
-
-        scrollTop : 0
-
-    }, 'slow');
-
-    return false;
-
-  });
-
-  //要素の表示アニメーション
-  $('div#fade').css('visibility', 'hidden');
-
-  $(window).scroll(function(){
-
-    var windowTop = $(window).scrollTop();
-
-    var windowHeight = $(window).height();
-
-    $('div#fade').each(function(){
-
-      var targetPosition = $(this).offset().top;
-
-      if(windowTop > (targetPosition - windowHeight) + 150){
-
-        $(this).addClass('fadeInDown');
-
-      }
-
-    });
-
-  });
-
-  //プラスボタン
-  $('.text-hide > .text').after('<div class="plus"><a href="#">＋</a></div>');
-
-  plusBtn();
-
-  $(window).resize(function(){
-
-    plusBtn();
-
-  });
-
-  $('.plus').click(function(){
-
-
-    $(this).prev().slideToggle();
-
-    return false;
-
-
-  });
-
-  function plusBtn (){
-
-    if(window.matchMedia('(max-width: 767px)').matches){
-
-        $('#plus').show();
-
-        $('.text').hide();
-
-    } else{
-
-        $('#plus').hide();
-
-        $('.text').show();
-
-    }
-
-  }
-
-  //モーダルウィンドウ
-  $('#index').click(function(){
-
-    $('#modal').fadeIn('slow');
-
-    menuCenter();
-
-    return false;
-
-  });
-
-  $('#close').click(function(){
-
-    $('#modal').fadeOut('slow');
-
-    return false;
-
-  });
-
-  $(window).resize(function(){
-
-    menuCenter();
-
-  });
-
-
-  function menuCenter(){
-
-    var w = $(window).width();
-
-    var h = $(window).height();
-
-    var cw = $('#modalMenu').outerWidth();
-
-    var ch = $('#modalMenu').outerHeight();
-
-    $('#modalMenu').css({
-
-        'left': ((w - cw) / 2) + 'px',
-
-        'top': ((h - ch) / 2) + 'px'
-
-    });
-
-  }
-
-});
-</script>
-
 
 </body>
 </html>
