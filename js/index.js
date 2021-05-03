@@ -82,16 +82,23 @@ $(function(){
 
         $('.plus').show();
 
+        $('.plus').css({
+          'transform':'rotate(90deg)'
+        });
+
         $('.text').hide();
 
     } else{
 
         $('.plus').hide();
 
+        $('.plus').css({
+          'transform':'rotate(90deg)'
+        });
+
         $('.text').show();
 
     }
-
   }
 
   //モーダルウィンドウ
