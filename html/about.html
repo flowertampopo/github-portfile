@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/about.css">
+  <title>about</title>
+  <script type="text/javascript" src="../js/jquery.min.js"></script>
+　<script type="text/javascript" src="../js/index.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+     <h1><a href="index.html">AYAKA YASUNO</a></h1>
+    </div>
+  </header>
+
+  <main>
+
+    <header class="aboutImg">
+      <div class="aboutImg-inner">
+        <h1>About</h1>
+      </div>
+    </header>
+
+    <article class="mainbody">
+
+      <div class="mainbody-inner">
+
+        <div class="profileImg" id="fade">
+          <div class="profileImg-inner">
+            <div class="name">ヤスノ　アヤカ</div>
+          </div>
+        </div>
+
+        <div class="profileContent" id="fade">
+          <div class="profileContent-inner">
+            <p>高校卒業後、IT関係の専門学校に入学しました。</br>
+            専門学校では、プログラマー専攻にて、HTML/CSSをはじめ、Java、Linuxなどを学びました。</p>
+
+            <p>アルバイトで従事していた医療業界に就職後、やはり専門学校で学んだプログラミングを活かした仕事をしたいと考え、
+            現在の会社に就職。</p>
+
+            <p>コロナをきっかけに、会社がリモートワークを取り入れたため、現在は週3日リモートワークを行っております。</br>
+          リモートワークでは、Teamsを使用しながら、チーム内でこまめに連絡を取り合い業務対応を行っております。</p>
+          </div>
+        </div>
+
+      </div>
+
+    </article>
+
+    <div class="page-top">
+      <a href="#" id="pageTop">Page top</a>
+    </div>
+
+    <div class="index">
+      <a href="#" title="index" id="index"><i class="fas fa-align-justify"></i></a>
+    </div>
+
+    <div class="index-content" id="modal">
+      <div class="index-content-inner">
+        <div class="close">
+          <a href="#" id="close">×</a>
+        </div>
+        <ul id="modalMenu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="skill.html">Skill</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>Copyright &copy; KUMA. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+<script>
+$(function(){
+  //トップボタン
+  var topBtn = $('#pageTop');
+
+  topBtn.click(function(){
+
+    $('body, html').animate({
+
+        scrollTop : 0
+
+    }, 'slow');
+
+    return false;
+
+  });
+
+  //要素の表示アニメーション
+  $('div#fade').css('visibility', 'hidden');
+
+  $(window).scroll(function(){
+
+    var windowTop = $(window).scrollTop();
+
+    var windowHeight = $(window).height();
+
+    $('div#fade').each(function(){
+
+      var targetPosition = $(this).offset().top;
+
+      if(windowTop > (targetPosition - windowHeight) + 150){
+
+        $(this).addClass('fadeInDown');
+
+      }
+
+    });
+
+  });
+
+  //プラスボタン
+  $('.text-hide > .text').after('<div class="plus"><a href="#">＋</a></div>');
+
+  plusBtn();
+
+  $(window).resize(function(){
+
+    plusBtn();
+
+  });
+
+  $('.plus').click(function(){
+
+
+    $(this).prev().slideToggle();
+
+    return false;
+
+
+  });
+
+  function plusBtn (){
+
+    if(window.matchMedia('(max-width: 767px)').matches){
+
+        $('#plus').show();
+
+        $('.text').hide();
+
+    } else{
+
+        $('#plus').hide();
+
+        $('.text').show();
+
+    }
+
+  }
+
+  //モーダルウィンドウ
+  $('#index').click(function(){
+
+    $('#modal').fadeIn('slow');
+
+    menuCenter();
+
+    return false;
+
+  });
+
+  $('#close').click(function(){
+
+    $('#modal').fadeOut('slow');
+
+    return false;
+
+  });
+
+  $(window).resize(function(){
+
+    menuCenter();
+
+  });
+
+
+  function menuCenter(){
+
+    var w = $(window).width();
+
+    var h = $(window).height();
+
+    var cw = $('#modalMenu').outerWidth();
+
+    var ch = $('#modalMenu').outerHeight();
+
+    $('#modalMenu').css({
+
+        'left': ((w - cw) / 2) + 'px',
+
+        'top': ((h - ch) / 2) + 'px'
+
+    });
+
+  }
+
+});
+</script>
+
+
+</body>
+</html>

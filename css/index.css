@@ -1,0 +1,206 @@
+/* KUMAのトップページにて使用するスタイルシート */
+
+body {margin: 0;
+      position: relative}
+
+h1 {margin: 0}
+
+a {display: block;
+   text-decoration: none;
+   color: #000000;}
+
+.header  {border-bottom: solid 2px #dddddd}
+
+.header-inner > h1 {text-align: center;}
+
+.header-inner > h1 > a  {font-weight: normal}
+
+.topimg > div  {height:500px;
+                color: #ffffff;
+                position: relative;
+                position: absolute;
+                top: 50px;
+                left: 0;
+                width: 100%;}
+
+.topimg > div > h1  {font-size: 120px;
+                     position: absolute;}
+
+.firstimg  {background-color: #f5b1aa;}
+
+.firstimg > h1  {top: 15%;
+                 left: 15%}
+
+.secondimg  {background-color: #89c3eb}
+
+.secondimg > h1  {bottom: 15%;
+                  right: 15%}
+
+.thirdimg  {background-color: #ffec47}
+
+.thirdimg > h1  {bottom: 15%;
+                 left: 15%}
+
+.fourthimg  {background-color: #c3d825}
+
+.fourthimg > h1  {top: 15%;
+                  right: 15%}
+
+.lastimg  {background: linear-gradient(to bottom right, #f5b1aa 25%, #ffec47 50%, #89c3eb 75%, #c3d825);
+           background: -webkit-linear-gradient(top left, #f5b1aa 25%, #ffec47 50%, #89c3eb 75%, #c3d825);
+           background: -moz-linear-gradient(top left, #f5b1aa 25%, #ffec47 50%, #89c3eb 75%, #c3d825)}
+
+.topimg > .lastimg > h1  {font-size: 50px;
+                          line-height: 500px;
+                          position: static;
+                          text-align: center;}
+
+.content-select  {margin-top: 600px;}
+
+.content-select-inner > ul  {margin: 0;
+                             padding: 0;
+                             list-style: none}
+
+
+.content-select-inner > ul > li > a  {font-size: 36px;
+                                      text-align: center;
+                                      padding-top: 50px;
+                                      padding-bottom: 50px;
+                                      position: relative;
+                                      transition: .5s}
+
+.content-select-inner > ul > li > a::before  {position: absolute;
+                                              top: 0;
+                                              right: 0;
+                                              left: 0;
+                                              bottom: 0;
+                                              z-index: -1;
+                                              content: "";
+                                              transform-origin: right top;
+                                              transform: scale(0, 1);
+                                              transition: transform .5s}
+
+.content-select-inner > ul > li > a:hover {color: #ffffff}
+
+.content-select-inner > ul > li > a:hover::before {transform-origin: left top;
+                                                   transform: scale(1, 1);}
+
+.content-select-inner > ul > li > p {margin: 0;
+                                     text-align: center;
+                                     padding: 3px 0}
+
+
+.about > a  {border:solid 2px #f5b1aa;
+             color: #f5b1aa;}
+
+.about > a::before  {background-color: #f5b1aa;}
+
+.about > p  {border:solid 2px #f5b1aa;
+             border-top: none;}
+
+.skill > a  {border:solid 2px #ffd900;
+             color: #ffd900}
+
+.skill > a::before {background-color: #ffd900;}
+
+.skill > p  {border:solid 2px #ffd900;
+             border-top: none}
+
+.contact > a  {border:solid 2px #c3d825;
+               color: #c3d825}
+
+.contact > a::before  {background-color: #c3d825}
+
+.contact > p  {border:solid 2px #c3d825;
+               border-top: none}
+
+.page-top  {display: none}
+
+#pageTop  {background-color: #a86f4c;
+           color: #ffffff;
+           font-size: 20px;
+           text-align: center;;
+           padding: 15px 0}
+
+#pageTop:hover  {opacity: 0.8}
+
+.works  {position: fixed;
+         bottom: 40px;
+         right: 20px}
+
+.works > a:hover  {opacity: 0.6}
+
+.fa-tree   {font-size: 26px;
+            background-color: #89c3eb;
+            width: 60px;
+            line-height: 60px;
+            height: 60px;
+            text-align: center;
+            color: #ffffff;
+            border-radius: 60px;
+            box-shadow: 3px 3px 6px #abced8}
+
+
+.footer  {background-color: #aaaaaa}
+
+.footer-inner > p  {color: #ffffff;
+                    margin: 0;
+                    text-align: center;
+                    padding: 20px 0}            
+
+
+@media(max-width: 599px){
+
+  .topimg > div > h1 {font-size: 70px;}
+
+  .topimg > .lastimg > h1 {font-size: 30px;}
+}
+
+
+
+
+
+@media(max-width: 767px){
+
+  .content-select  {padding-left: 15%;
+                    padding-right: 15%;
+                    margin-bottom: 100px}
+
+  .content-select-inner > ul > li {margin-bottom: 80px;}
+
+  .page-top  {display:block}
+
+}
+
+
+@media(min-width: 768px){
+
+  .content-select  {margin-bottom: 100px;
+                    padding-left: 5%;
+                    padding-right: 5%}
+
+  .content-select-inner > ul:after {display: block;
+                                    content: "";
+                                    clear: both;}
+
+  .content-select-inner > ul > li  {float: left;;
+                                    width: 45%;
+                                    box-sizing: border-box;
+                                    -webkit-box-sizing: border-box;
+                                    -moz-box-sizing: border-box}
+
+  .content-select-inner > ul > li:nth-child(1) {margin-right: 5%}
+
+  .content-select-inner > ul > li:nth-child(2) {margin-left: 5%}
+
+}
+
+@media(min-width: 1100px){
+
+  .content-select  {width: 1000px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    padding-left: 0;
+                    padding-right: 0}
+
+}

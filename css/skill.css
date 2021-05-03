@@ -1,0 +1,207 @@
+/* Skillにて使用するスタイルシート */
+
+body {margin: 0;
+      position: relative}
+
+h1, h2 {margin: 0}
+
+a {display: block;
+   text-decoration: none;
+   color: #000000;}
+
+.header  {border-bottom: solid 2px #dddddd}
+
+.header-inner > h1 {text-align: center;}
+
+.header-inner > h1 > a  {font-weight: normal}
+
+.skillImg-inner > h1  {line-height: 400px;
+                      text-align: center;
+                      background: linear-gradient(to bottom right, #ffea00 20%, #fcd575 40%, #fbd26b 60%, #ffec47 80%, #fef263);
+                      background: -webkit-linear-gradient(top left, #ffea00 20%, #fcd575 40%, #fbd26b 60%, #ffec47 80%, #fef263);
+                      background: -moz-linear-gradient(top left, #ffea00 20%, #fcd575 40%, #fbd26b 60%, #ffec47 80%, #fef263);
+                      color: #ffffff;
+                      font-size: 50px}
+
+.mainbody  {margin: 100px 0;}
+
+.skill-content-inner > ul  {margin: 0;
+                            padding: 0;
+                            list-style: none}
+
+.skill-content-inner > ul > li {margin-bottom: 100px}
+
+
+
+.skill-content-inner > ul > li > div:nth-child(1) > h2  {color: #ffffff;
+                                                         line-height: 100px;
+                                                         text-align: center;
+                                                         font-size: 20px}
+
+.html-css > .img > h2  {background-color: #f5b199;
+                        box-shadow: 5px 5px 10px #f6bfbc}
+
+.js > .img > h2  {background-color: #83ccd2;
+                  box-shadow: 5px 5px 10px #bce2e8}
+
+.study > .img > h2 {background-color: #a8c97f;
+                    box-shadow: 5px 5px 10px #cee4ae}
+
+.plus  {text-align: center;}
+
+.plus > a  {font-size: 30px;
+            border: solid 2px #dddddd;
+            display: inline-block;
+            width: 60px;
+            line-height: 60px;
+            height: 60px;
+            border-radius: 60px;
+            color: #aaaaaa}
+
+.page-top  {display: none}
+
+#pageTop  {background-color: #a86f4c;
+           color: #ffffff;
+           font-size: 20px;
+           text-align: center;;
+           padding: 15px 0}
+
+#pageTop:hover  {opacity: 0.8}
+
+.contact  {position: fixed;
+           bottom: 40px;
+           right: 20px}
+
+.contact > a:hover  {opacity: 0.6}
+
+.fa-paper-plane   {font-size: 26px;
+                   background-color: #c3d825;
+                   width: 60px;
+                   line-height: 60px;
+                   height: 60px;
+                   text-align: center;
+                   color: #ffffff;
+                   border-radius: 60px;
+                   box-shadow: 3px 3px 6px #b8d200}
+
+.index  {position: fixed;
+                            bottom: 40px;
+                            right: 20px;}
+
+
+.index > a:hover  {opacity: 0.6}
+
+.fa-align-justify   {font-size: 26px;
+                                        background-color: #f0908d;
+                                        width: 60px;
+                                        line-height: 60px;
+                                        height: 60px;
+                                        text-align: center;
+                                        color: #ffffff;
+                                        border-radius: 60px;
+                                        box-shadow: 3px 3px 6px #f2a0a1}
+
+.index-content  {background: -webkit-linear-gradient(top left, #df7163 25%, #fbca4d 50%, #1e50a2 75%, #3b7960);
+                                    background: -o-linear-gradient(top left, #df7163 25%, #fbca4d 50%, #1e50a2 75%, #3b7960);
+                                    background: linear-gradient(to bottom right, #df7163 25%, #fbca4d 50%, #1e50a2 75%, #3b7960);
+                                    position: fixed;
+                                    top: 0;
+                                    bottom: 0;
+                                    left: 0;
+                                    right: 0;
+                                    display: none;
+                                    opacity: 0.9}
+
+.close  {position: relative;}
+
+#close  {font-size: 45px;
+                            color: #ffffff;
+                            position: absolute;
+                            right: 30px}
+
+.index-content-inner > ul  {list-style: none;
+                                               margin: 0;
+                                               padding: 0;
+                                               position: fixed;}
+
+.index-content-inner > ul > li {margin-bottom: 15px}
+
+.index-content-inner > ul > li > a {color: #ffffff;
+                                                       font-size: 20px;
+                                                       font-weight: bold;}
+
+
+.footer  {background-color: #aaaaaa}
+
+.footer-inner > p  {color: #ffffff;
+                    margin: 0;
+                    text-align: center;
+                    padding: 20px 0}
+
+
+@media(max-width: 599px){
+
+  .mainbody  {max-width: 100%;
+              margin-left: auto;
+              margin-right: auto;}
+
+
+
+}
+
+@media(max-width: 767px){
+
+  .mainbody  {max-width: 50%;
+              margin-left: auto;
+              margin-right: auto}
+
+  .skill-content-inner > ul > li > div:nth-child(1) {padding-bottom: 70px}
+
+  .skill-content-inner > ul > li > div:nth-child(2) {padding-left: 10px;
+                                                     padding-right: 10px;
+                                                     padding-bottom: 50px;}
+
+  #plus  {display: block}
+
+  .page-top  {display: block}
+
+  .turn {transform: rotate(45deg);}
+
+
+}
+
+@media(min-width: 768px){
+
+  .mainbody  {padding-left: 10%;
+              padding-right: 10%}
+
+
+  .skill-content-inner > ul > li::after  {display: block;
+                                          content: "";
+                                          clear: both;}
+
+  .skill-content-inner > ul > li > div  {float: left;
+                                         box-sizing: border-box;
+                                         -webkit-box-sizing: border-box;
+                                         -moz-box-sizing: border-box}
+
+  .skill-content-inner > ul > li > div:nth-child(1) {width: 35%;
+                                                     padding-right: 70px}
+
+  .skill-content-inner > ul > li > div:nth-child(2) {width: 65%;
+                                                     display:block}
+
+  #plus  {display: none}
+
+
+
+
+}
+
+@media(min-width: 1100px){
+
+  .mainbody  {max-width: 1000px;
+              margin-left: auto;
+              margin-right: auto}
+
+}
